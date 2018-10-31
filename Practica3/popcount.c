@@ -180,15 +180,16 @@ int popcount5(unsigned* array, size_t len)
     
     for (i=0;i<len;i++)
     {
+        val=0;
         x=array[i];
         for (j = 0; j < 8; j++) 
-        {
-            val += x & 0x01010101;
-            x >>= 1;
-        }
-    val += (val >> 16);
-    val += (val >> 8);
-    result += (val & 0xFF);
+            {
+                val += x & 0x01010101;
+                x >>= 1;
+            }
+        val += (val >> 16);
+        val += (val >> 8);
+        result += (val & 0xFF);
     }
 return result;
 }
