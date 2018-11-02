@@ -1,3 +1,5 @@
+//David Gómez Hernández 2ºB
+
 // gcc popcount.c -o popcount -Og -g -D TEST=1
 /*
 === TESTS === ____________________________________
